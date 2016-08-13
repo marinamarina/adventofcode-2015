@@ -9,11 +9,12 @@
   "author": "Marina Shchukina",
   "license": "ISC",
   "scripts": {
-    "start": "node index",
+    "start": "node main",
     "test": "mocha test.js"
   },
   "dependencies": {
     "lodash": "^4.11.1",
+    "md5": "^2.1.0",
     "mocha": "^3.0.2"
   },
   "devDependencies": {

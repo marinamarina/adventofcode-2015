@@ -1,10 +1,8 @@
 'use strict';
-var _ = require('lodash'),
-    fs = require('fs');
+var _ = require('lodash');
 
 var vowels = 'aeiou';
 var disallowedValues = ['ab', 'cd', 'pq', 'xy'];
-var input = fs.readFileSync('input.txt', 'utf8').trim().split('\n');
 
 function isNice1(string) {
     return /([aeiou].{0,}){3}/.test(string);
@@ -14,7 +12,6 @@ function isNice2(string) {
     return /([a-z])\1/.test(string);
 }
 
-// is fine
 function isNice3(string) {
     return !_.includes(_.map(disallowedValues, function(k) {
             return _.includes(string, k);
@@ -30,19 +27,23 @@ function isNice5(string) {
 }
 
 module.exports = {
-    one : function() {
+    part1 : function(input) {
+        var transformedInput = input.split('\n');
+
         return _.size(
             _.compact(
-                _.map(input, function(v) {
+                _.map(transformedInput, function(v) {
                     return isNice1(v) && isNice2(v) && isNice3(v);
                 })
             )
         );
     },
-    two : function() {
+    part2 : function(input) {
+        var transformedInput = input.split('\n');
+
         return _.size(
             _.compact(
-                _.map(input, function(v) {
+                _.map(transformedInput, function(v) {
                     return isNice4(v) && isNice5(v);
                 })
             )

@@ -1,14 +1,14 @@
 'use strict';
-var _ = require('lodash'),
-    fs = require('fs');
+var _ = require('lodash');
 
 var initPoint = [0, 0];
-var input = fs.readFileSync('input.txt', 'utf8').trim().split('');
 
 module.exports = {
-    one : function() {
+    part1 : function(input) {
+        var transformedInput = input.split('');
         var point = [0,0];
-        return _(input).map(function(v) {
+
+        return _(transformedInput).map(function(v) {
                     if (v === '^') {
                         point[1]++;
                     } else if (v === 'v') {
@@ -21,24 +21,25 @@ module.exports = {
                     return JSON.stringify(_.map(point));
                 }).uniq().size();
     },
-    two : function() {
+    part2 : function(input) {
+        var transformedInput = input.split('');
         var bothSantas = [],
             set = ['[0,0]'];
 
         bothSantas.push(
-            _.filter(input, function(v, i) {
+            _.filter(transformedInput, function(v, i) {
                 return i % 2 === 0;
             })
         );
         bothSantas.push(
-            _.filter(input, function(v, i) {
+            _.filter(transformedInput, function(v, i) {
                 return i % 2 !== 0;
             })
         );
 
         set = _.flatten(
             _.map(bothSantas, function(santa) {
-            var point = [0,0];
+                var point = [0,0];
                 return _.map(santa, function(v) {
                             if (v === '^') {
                                 point[1]++;

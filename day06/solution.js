@@ -1,10 +1,8 @@
 'use strict';
-var _ = require('lodash'),
-    fs = require('fs');
+var _ = require('lodash');
 
 var rows = 1000;
 var cols = 1000;
-var input = fs.readFileSync('input.txt', 'utf8').trim().split('\n');
 
 function readLine (v) {
     return /(.*) (-?\d+),(-?\d+) through (-?\d+),(-?\d+)/.exec(v).map(function(n, i) {
@@ -42,7 +40,7 @@ function toggleBrightness (points, i) {
     points[i] += 2;
 }
 
-function readInstructions(functions) {
+function readInstructions(functions, input) {
     var points = _.fill(Array(rows * cols), 0);
     _.map(input, function (v) {
         var line = readLine(v);
@@ -69,14 +67,17 @@ function readInstructions(functions) {
 }
 
 module.exports = {
-    one : function() {
+    part1 : function(input) {
         // answer: 543903
-        var points = readInstructions({on: turnOnLight, off: turnOffLight, toggle: toggleLight});
+        var transformedInput = input.split('\n');
+
+        var points = readInstructions({on: turnOnLight, off: turnOffLight, toggle: toggleLight}, transformedInput);
         return _(points).compact().size();
     },
-    two : function() {
+    part2 : function(input) {
         // answer: 14687245
-        var points = readInstructions({on: increaseBrightness, off: decreaseBrightness, toggle: toggleBrightness});
+        var transformedInput = input.split('\n');
+        var points = readInstructions({on: increaseBrightness, off: decreaseBrightness, toggle: toggleBrightness}, transformedInput);
 
         return _.reduce(points, function(sum, v) {
             return sum + v;

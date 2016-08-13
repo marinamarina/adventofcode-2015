@@ -2,14 +2,19 @@
   "name": "adventofcode",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marinamarina/adventofcode"
   },
-  "author": "",
+  "author": "Marina Shchukina",
   "license": "ISC",
+  "scripts": {
+    "start": "node index",
+    "test": "mocha test.js"
+  },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.11.1",
+    "mocha": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5"

@@ -34,6 +34,6 @@ This is a quick list of all solutions:
 Example
 -------
 ```
-node main "2" "2"
+npm start 2 2
 Answer: 3783758
 ```

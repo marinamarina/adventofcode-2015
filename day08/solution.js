@@ -3,15 +3,10 @@ var _ = require('lodash'),
     fs = require('fs');
 
 module.exports = {
-    part1: (input) => {
-        // 1342
-        let i = input.split('\n');
-        let unescapedArray = i.map((v) => { return v.replace(/\"/g, ""); });
-
+    part1: i => {
+        //1342
         let rawStringLength = i.join("").length;
-        let escapedStringLength = i.map((v) => {
-            return v.replace(/\"/g, "").replace(/\\x[a-z0-9]{2}|\\"|\\\\/g, '*');
-         }).join('').length + 2;
+        let escapedStringLength = i.map(v =>v.replace(/\\x[a-z0-9]{2}|\\"|\\\\/g, '*').replace(/\"/g, "")).join('').length;
 
         return rawStringLength - escapedStringLength;
     },

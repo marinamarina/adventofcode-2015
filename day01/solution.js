@@ -2,7 +2,7 @@
 var _ = require('lodash');
 
 function transformInput (input) {
-    return input.split('').map(function(v) { return v; });
+    return input.split('');
 }
 
 module.exports = {

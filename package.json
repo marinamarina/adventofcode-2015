@@ -9,15 +9,16 @@
   "author": "Marina Shchukina",
   "license": "ISC",
   "scripts": {
-    "start": "node main",
-    "test": "mocha test.js"
+    "test": "mocha test/*"
   },
   "dependencies": {
+    "js-combinatorics": "^0.5.2",
     "lodash": "^4.11.1",
     "md5": "^2.1.0",
     "mocha": "^3.0.2"
   },
   "devDependencies": {
+    "chai": "*",
     "babel-cli": "^6.4.5",
     "babel-eslint": "^6.1.2"
   }

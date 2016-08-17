@@ -27,13 +27,7 @@ This is a quick list of all solutions:
 [7]: http://adventofcode.com/day/7
 [8]: http://adventofcode.com/day/8
 
-## To run solutions:
+## To test solutions:
 ------
-`npm start <day#> <part#>`
+`npm test`
 
-Example
--------
-```
-npm start 2 2
-Answer: 3783758
-```

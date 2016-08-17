@@ -28,6 +28,6 @@ This is a quick list of all solutions:
 [8]: http://adventofcode.com/day/8
 
 ## To test solutions:
-------
+
 `npm test`
 

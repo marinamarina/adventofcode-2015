@@ -1,5 +1,5 @@
 var assert = require('assert');
-var solution = require('../main');
+var solution = require('../utils/getSolution');
 
 describe('adventofcode', function() {
   describe('Day08 solution ', function() {

@@ -5,10 +5,9 @@ var initPoint = [0, 0];
 
 module.exports = {
     part1 : function(input) {
-        var transformedInput = input.split('');
         var point = [0,0];
 
-        return _(transformedInput).map(function(v) {
+        return _(input[0].split('')).map(function(v) {
                     if (v === '^') {
                         point[1]++;
                     } else if (v === 'v') {
@@ -22,17 +21,16 @@ module.exports = {
                 }).uniq().size();
     },
     part2 : function(input) {
-        var transformedInput = input.split('');
         var bothSantas = [],
             set = ['[0,0]'];
 
         bothSantas.push(
-            _.filter(transformedInput, function(v, i) {
+            _.filter(input[0].split(''), function(v, i) {
                 return i % 2 === 0;
             })
         );
         bothSantas.push(
-            _.filter(transformedInput, function(v, i) {
+            _.filter(input[0].split(''), function(v, i) {
                 return i % 2 !== 0;
             })
         );

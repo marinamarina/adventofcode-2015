@@ -44,7 +44,6 @@ function readInstructions(functions, input) {
     var points = _.fill(Array(rows * cols), 0);
     _.map(input, function (v) {
         var line = readLine(v);
-        console.log("Instruction: " + line[1])
 
         for (var x = line[2]; x <= line[4]; x++) {
             for (var y = line[3]; y <= line[5]; y++) {
@@ -68,16 +67,11 @@ function readInstructions(functions, input) {
 
 module.exports = {
     part1 : function(input) {
-        // answer: 543903
-        var transformedInput = input.split('\n');
-
-        var points = readInstructions({on: turnOnLight, off: turnOffLight, toggle: toggleLight}, transformedInput);
+        var points = readInstructions({on: turnOnLight, off: turnOffLight, toggle: toggleLight}, input);
         return _(points).compact().size();
     },
     part2 : function(input) {
-        // answer: 14687245
-        var transformedInput = input.split('\n');
-        var points = readInstructions({on: increaseBrightness, off: decreaseBrightness, toggle: toggleBrightness}, transformedInput);
+        var points = readInstructions({on: increaseBrightness, off: decreaseBrightness, toggle: toggleBrightness}, input);
 
         return _.reduce(points, function(sum, v) {
             return sum + v;

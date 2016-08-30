@@ -28,22 +28,20 @@ function isNice5(string) {
 
 module.exports = {
     part1 : function(input) {
-        var transformedInput = input.split('\n');
 
         return _.size(
             _.compact(
-                _.map(transformedInput, function(v) {
+                _.map(input, function(v) {
                     return isNice1(v) && isNice2(v) && isNice3(v);
                 })
             )
         );
     },
     part2 : function(input) {
-        var transformedInput = input.split('\n');
 
         return _.size(
             _.compact(
-                _.map(transformedInput, function(v) {
+                _.map(input, function(v) {
                     return isNice4(v) && isNice5(v);
                 })
             )

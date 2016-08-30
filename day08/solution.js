@@ -2,8 +2,8 @@
 
 module.exports = {
     part1: i => {
-        //1342
         let rawStringLength = i.join("").length;
+        console.log(rawStringLength)
         let escapedStringLength = i.map(
             v => v.replace(/\\x[a-z0-9]{2}|\\"|\\\\/g, '*')
             .replace(/\"/g, "")

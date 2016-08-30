@@ -3,7 +3,7 @@ var _ = require('lodash'),
     fs = require('fs');
 
 function transformInput(input) {
-    return input.split('\n').map(function(v) {
+    return input.map(function(v) {
         return _.sortBy(_.map(v.split('x'), _.parseInt));
     });
 }

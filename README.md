@@ -14,8 +14,9 @@ This is a quick list of all solutions:
 | 04  | [The Ideal Stocking Stuffer][4]             | [:star:][:star:](./day04/solution.js) |
 | 05  | [Doesn't He Have Intern-Elves For This?][5] | [:star:][:star:](./day05/solution.js) |
 | 06  | [Probably a Fire Hazard][6]                 | [:star:][:star:](./day06/solution.js) |
-| 07  | [Some Assembly Required][7]                 | [:star:](./day07/solution.js) |
-| 08  | [Matchsticks][8]                            | [:star:](./day08/solution.js) |
+| 07  | [Some Assembly Required][7]                 | [:star:](./day07/solution.js)         |
+| 08  | [Matchsticks][8]                            | [:star:][:star:](./day08/solution.js)         |
+| 09  | [All in a Single Night ][9]                 | [:star:][:star:](./day09/solution.js) |
 
 
 [1]: http://adventofcode.com/day/1
@@ -26,8 +27,15 @@ This is a quick list of all solutions:
 [6]: http://adventofcode.com/day/6
 [7]: http://adventofcode.com/day/7
 [8]: http://adventofcode.com/day/8
+[9]: http://adventofcode.com/day/9
+
+## To run solutions from command line:
+`node main DAY PART`
+
+for example
+
+`node main.js 9 1` will run day09 solution, part1
 
 ## To test solutions:
 
 `npm test`
-

@@ -37,4 +37,8 @@ describe('Advent of code', () => {
       assert.equal(solution(9,2), 898);
   });
 
+  it('Day 12. part1: 111754', () => {
+      assert.equal(solution(12,1), 111754);
+  });
+
 });

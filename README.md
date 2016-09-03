@@ -17,6 +17,7 @@ This is a quick list of all solutions:
 | 07  | [Some Assembly Required][7]                 | :star:        (./day07/solution.js) |
 | 08  | [Matchsticks][8]                            | :star: :star: (./day08/solution.js) |
 | 09  | [All in a Single Night ][9]                 | :star: :star: (./day09/solution.js) |
+| 12  | [JSAbacusFramework.io ][12]                 | :star:        (./day12/solution.js) |
 
 
 [1]: http://adventofcode.com/day/1
@@ -28,14 +29,16 @@ This is a quick list of all solutions:
 [7]: http://adventofcode.com/day/7
 [8]: http://adventofcode.com/day/8
 [9]: http://adventofcode.com/day/9
+[12]: http://adventofcode.com/day/12
+
 
 ## To run solutions from command line:
 `node main DAY PART`
 
 for example
 
-`node main.js 9 1` will run day09 solution, part1
+`node main.js 9 1` will run day9 solution, part1
 
-## To test solutions:
+## To test all solutions:
 
 `npm test`

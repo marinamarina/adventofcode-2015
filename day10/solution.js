@@ -1,15 +1,19 @@
 'use strict';
 const _ = require('lodash');
+const look_and_say = input =>input.match(/(\d)\1*/g).map((v) => `${v.length}${v[0]}`).join('');
 
 module.exports = {
     part1: i => {
+        let result = i[0];
+        _.times(40, () => { result = look_and_say(result) });
 
-        var parse = input => _.chain( input.match(/(\d)\1*/g) ).map(function(v) { return `${v.length}${v[0]}`; }).value().join('');
-
-        return parse(i[0]);
+        return result.length;
     },
 
     part2: i => {
-        return 2;
+       let result = i[0];
+        _.times(50, () => { result = look_and_say(result) });
+
+         return result.length;
     }
 };

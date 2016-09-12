@@ -10,6 +10,20 @@ module.exports = {
     },
 
     part2: i => {
-        return 2;
+        let result = 0;
+
+        let scan = function (obj) {
+            if (_.isObject(obj) && _.every(obj, v => v !== 'red')) {
+                _.forEach(obj, value => scan(value));
+            } else if (_.isArray(obj)) {
+                _(obj).forEach(value => scan(value));
+            } else if (_.isNumber(obj)) {
+                result += obj;
+            };
+
+            return result;
+        };
+
+        return scan(JSON.parse(i[0]));
     }
 };

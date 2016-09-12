@@ -17,7 +17,7 @@ This is a quick list of all solutions:
 | 07  | [Some Assembly Required][7]                 | :star:        (./day07/solution.js) |
 | 08  | [Matchsticks][8]                            | :star: :star: (./day08/solution.js) |
 | 09  | [All in a Single Night ][9]                 | :star: :star: (./day09/solution.js) |
-| 12  | [JSAbacusFramework.io ][12]                 | :star:        (./day12/solution.js) |
+| 12  | [JSAbacusFramework.io ][12]                 | :star: :star: (./day12/solution.js) |
 
 
 [1]: http://adventofcode.com/day/1

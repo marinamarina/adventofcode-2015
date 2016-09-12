@@ -43,8 +43,9 @@ describe('Advent of code', () => {
       done();
   }).timeout(7000);
 
-  it('Day 12. part1: 111754', () => {
+  it('Day 12. part1: 111754, part2: 65402', () => {
       assert.equal(solution(12,1), 111754);
+      assert.equal(solution(12,2), 65402);
   });
 
 });
